@@ -1,7 +1,5 @@
 use std::error::Error;
 
-use reqwest;
-
 fn do_something() {}
 
 #[tokio::main]
@@ -13,7 +11,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     let content = response.text().await?;
     print!("{}", content);
 
-    for i in 0..100 {
+    for _i in 0..100 {
         do_something();
     }
 
